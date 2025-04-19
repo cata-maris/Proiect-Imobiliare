@@ -12,10 +12,14 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
   font-family: "Playfair Display", serif;
+}
+.hamburger {
+  display: none;
 }
 nav {
   position: fixed;
@@ -51,6 +55,9 @@ nav .nav-contacts {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+nav .nav-contacts a {
+  text-decoration: none;
   color: #222;
 }
 
@@ -222,23 +229,7 @@ nav img {
 .ap-box .active h3 {
   opacity: 1;
 }
-.ap-box {
-  height: 80vh;
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background: center/cover;
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  flex: 0.5;
-  position: relative;
-  margin: 10px;
-  transition: flex 0.7s ease-in;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .ap-box h2 {
   text-align: center;
   align-self: center;
@@ -263,7 +254,7 @@ nav img {
   background: url(./three-room.jpg) center center/cover no-repeat;
 }
 .ap-box:nth-child(4) {
-  background: url(./penthouse2.jpg) center/cover no-repeat;
+  background: url(./penthouse2.jpg) center center/cover no-repeat;
 }
 .ap-box {
   height: 90vh;
@@ -292,17 +283,18 @@ nav img {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   gap: 5rem;
-  color: var(--primary-color);
+  color: #c4a484;
   font-weight: 300;
-  padding: 10px 100px;
+  width: 80%;
+  margin: auto;
 }
 .ap-text h3 {
   font-weight: 200;
 }
 .ap-text h2 {
   text-align: center;
-  flex: 1;
   font-size: 1.7rem;
 }
 .ap-text p {
@@ -321,6 +313,7 @@ nav img {
   transition: all ease-in-out 0.4s;
   font-weight: 500;
   margin-left: 8px;
+  margin-top: 1rem;
 }
 .btn:hover {
   background: var(--primary-color);
@@ -347,7 +340,7 @@ nav img {
 #location {
   background: var(--third-color);
   margin-top: 10rem;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,15 +351,15 @@ nav img {
   justify-content: center;
   background: url(./location1.jpg) center center/cover;
   height: 100%;
-  width: 30%;
+  width: 40%;
   flex: 1;
 }
 .location-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  align-items: flex-start;
+  gap: 1.8rem;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -382,5 +375,399 @@ nav img {
   height: 100%;
   flex: 2;
   border: 1px solid #111;
+  z-index: 1;
 }
-/* editabil la harta */
+/* sectiunea de contact */
+
+#contact {
+  background: var(--secondary-color);
+  padding: 100px 0px;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4a484;
+  border-bottom: 2px solid #c4a484;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.8rem;
+  width: 60%;
+  text-align: center;
+}
+.contact-form h4 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+#contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem;
+  font-size: 1.3rem;
+}
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+.form-grup input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: inherit;
+  color: #c4a484;
+  font-size: 1rem;
+}
+.form-grup input::placeholder {
+  color: #c4a484;
+}
+
+.input-btn {
+  padding: 10px;
+  width: 30%;
+  margin-top: 2.3rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid #c4a484;
+  background: inherit;
+  color: #c4a484;
+  font-size: 1rem;
+  transition: all ease-in-out 0.4s;
+}
+.input-btn:hover {
+  border: 2px solid var(--secondary-color);
+  background: #c4a484;
+  color: var(--secondary-color);
+}
+
+footer {
+  background: var(--secondary-color);
+  color: #c4a484;
+  padding: 30px 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8),
+    0 0 20px 0 rgba(255, 255, 255, 0.19);
+  padding: 30px;
+  color: #c4a484;
+}
+.social-media h3 {
+  border-bottom: 2px solid #c4a484;
+  padding-bottom: 15px;
+}
+.social-media h4 {
+  margin-top: 1rem;
+}
+footer p {
+  width: 40%;
+  font-weight: 500;
+  text-align: end;
+}
+.social-media a {
+  text-decoration: none;
+  color: #c4a484;
+}
+
+#top-btn {
+  padding: 10px 15px;
+  font-size: 1.4rem;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 100;
+  background: #f2d2bd;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: all ease-in-out 0.4s;
+}
+#top-btn:hover {
+  opacity: 1;
+}
+
+/* Responsiveness! */
+/* making the website responsive */
+@media (max-width: 1267px) {
+  nav {
+    font-size: 1rem;
+  }
+  nav i {
+    font-size: 2rem;
+  }
+  #starting-info {
+    gap: 2rem;
+  }
+  .location-text {
+    font-size: 1.3rem;
+  }
+  .headings {
+    font-size: 1.5rem;
+  }
+  .welcome-text h3:nth-child(2) {
+    font-size: 2rem;
+  }
+  .welcome-btn {
+    font-size: 1.2rem;
+  }
+  .ap-text p {
+    font-size: 1.1rem;
+    text-align: center;
+    flex: 1;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .ap-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+    gap: 2.5rem;
+  }
+  .starting-info-text {
+    font-size: 1.1rem;
+    gap: 2rem;
+  }
+  #starting-info {
+    gap: 1rem;
+  }
+  #starting-info {
+    gap: 2rem;
+  }
+  .location-text {
+    font-size: 1rem;
+  }
+  footer {
+    padding: 30px 60px;
+  }
+  #top-btn {
+    bottom: 30px;
+    right: 10px;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+  }
+  .contact-form h4 {
+    font-size: 1.1rem;
+  }
+  .contact-form {
+    font-size: 1.5rem;
+  }
+  #contact form {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .headings {
+    font-size: 1.3rem;
+  }
+  .welcome-text h3:nth-child(2) {
+    font-size: 1.7rem;
+  }
+  .welcome-btn {
+    width: 70%;
+    font-size: 1rem;
+  }
+  .starting-info-text {
+    flex-direction: column;
+  }
+  .starting-info-text div {
+    padding: 10px;
+  }
+  #starting-info {
+    padding: 10px 30px 30px 30px;
+  }
+  .starting-info-images {
+    flex-direction: column;
+  }
+  .starting-info-images img {
+    width: 100%;
+  }
+
+  .ap-box {
+    height: 70vh;
+  }
+  .ap-box h2 {
+    font-size: 0.8rem;
+  }
+  .ap-box h3 {
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 30px 50px;
+    justify-content: center;
+    gap: 3rem;
+  }
+  #apartments-section {
+    gap: 2rem;
+    padding-top: 40px;
+  }
+  .ap-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    width: 100%;
+    margin: auto;
+  }
+  .ap-text h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    align-self: top;
+  }
+  .btn {
+    width: 50%;
+    margin: auto;
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .ap-text p {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    grid-row: 2;
+  }
+  nav {
+    padding: 10px 20px 5px 20px;
+    justify-content: center;
+    gap: 3rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  nav img {
+    height: 70px;
+  }
+  nav .nav-contacts {
+    width: 20%;
+  }
+  #location {
+    flex-direction: column;
+    height: 140vh;
+  }
+  .loc-text-image {
+    width: 100%;
+  }
+  .location-text {
+    align-items: center;
+  }
+  #location-map {
+    width: 100%;
+  }
+}
+
+@media (max-width: 730px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  footer p {
+    width: 70%;
+    text-align: center;
+  }
+  #contact {
+    padding: 30px;
+  }
+  .contact-form {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .contact-form h4 {
+    font-size: 1rem;
+  }
+  #location {
+    flex-direction: column;
+    height: 120vh;
+  }
+  #apartments {
+    flex-direction: column;
+    height: 120vh;
+  }
+  .ap-box {
+    width: 100%;
+    transition: all 0.7s ease-in;
+  }
+  .ap-box.active {
+    flex: 4;
+  }
+  .ap-box h2 {
+    font-size: 1.2rem;
+  }
+
+  /* navbar reconfigure */
+  nav ul {
+    flex-direction: column;
+  }
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: var(--third-color);
+    padding: 10px;
+    z-index: 101;
+    transition: all ease-in-out 0.7s;
+    cursor: pointer;
+  }
+  .hamburger span {
+    width: 100%;
+    background: #222;
+    height: 2px;
+    transition: ease-in-out 0.4s all;
+  }
+  nav {
+    flex-direction: column;
+    padding: 20px 5px;
+    width: 40%;
+    height: 100vh;
+    transform: translateX(300px);
+    right: 0;
+    transition: all ease-in-out 0.7s;
+  }
+  .on {
+    transform: translateX(0);
+  }
+
+  .change .span-1 {
+    transform: rotateZ(-405deg) translate(-4px, 3px);
+  }
+  .change .span-2 {
+    opacity: 0;
+  }
+  .change .span-3 {
+    transform: rotateZ(405deg) translate(-4px, -3px);
+  }
+}

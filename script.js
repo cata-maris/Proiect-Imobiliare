@@ -1,15 +1,22 @@
 // navbar dissapearing when scrolling
+const topBtn = document.getElementById("top-btn");
 
 let prevState = window.pageYOffset;
 window.onscroll = function () {
-  let currentState = window.pageYOffset;
-  if (window.scrollY > 150) {
-    if (prevState > currentState) {
-      document.getElementsByClassName("navbar")[0].style.opacity = "100%";
+  if (window.innerWidth >= 730) {
+    let currentState = window.pageYOffset;
+    if (window.scrollY > 150) {
+      topBtn.style.display = "block";
+
+      if (prevState > currentState) {
+        document.querySelector("nav").style.opacity = "100%";
+      } else {
+        document.querySelector("nav").style.opacity = "0";
+      }
+      prevState = currentState;
     } else {
-      document.getElementsByClassName("navbar")[0].style.opacity = "0";
+      topBtn.style.display = "none";
     }
-    prevState = currentState;
   }
 };
 
@@ -72,7 +79,7 @@ window.addEventListener("scroll", () => {
 const apBox = document.querySelectorAll(".ap-box");
 
 apBox.forEach((box) => {
-  box.addEventListener("mouseover", () => {
+  box.addEventListener("click", () => {
     removeActiveClasses();
     box.classList.add("active");
   });
@@ -98,3 +105,17 @@ const marker = L.marker([44.207562, 28.646602])
   .addTo(map)
   .bindPopup("Custom Residence")
   .openPopup();
+
+//animatie pentru butonul de back-on-top
+topBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
+
+// hamburger menu
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+  document.querySelector("nav").classList.toggle("on");
+  hamburger.classList.toggle("change");
+});

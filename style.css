@@ -196,10 +196,8 @@ nav img {
 }
 
 .starting-info-images img:nth-child(2).display-image {
-  transform: translateX(0%);
   opacity: 100%;
   z-index: 1;
-  display: block;
 }
 .starting-info-images img:nth-child(1).display-image {
   transform: translateX(0%);

@@ -793,6 +793,9 @@ footer p {
   .welcome-box {
     width: 60%;
   }
+  .welcome-text {
+    margin-top: 0;
+  }
   #starting-info {
     margin-top: 6rem;
     gap: 0.8rem;

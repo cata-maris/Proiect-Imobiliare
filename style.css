@@ -173,7 +173,6 @@ nav img {
   opacity: 0;
 }
 .starting-info-images img:nth-child(2) {
-  transform: translateX(100%);
   opacity: 0;
 }
 .starting-info-text {
@@ -194,18 +193,20 @@ nav img {
   text-align: center;
   width: 100%;
 }
-.display {
-  opacity: 100%;
-}
+
 .starting-info-images img:nth-child(2).display-image {
   transform: translateX(0%);
   opacity: 100%;
   z-index: 1;
+  display: block;
 }
 .starting-info-images img:nth-child(1).display-image {
   transform: translateX(0%);
   opacity: 100%;
   z-index: 1;
+}
+.display {
+  opacity: 100%;
 }
 /* sectiunea apartments */
 #apartments-section {
@@ -768,5 +769,91 @@ footer p {
   }
   .change .span-3 {
     transform: rotateZ(405deg) translate(-4px, -3px);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    width: 50%;
+  }
+  .welcome-box {
+    width: 50%;
+  }
+  .headings {
+    font-size: 1.2rem;
+  }
+  .welcome-text h3:nth-child(2) {
+    font-size: 1.4rem;
+  }
+  .welcome-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .welcome-box {
+    width: 60%;
+  }
+  #starting-info {
+    margin-top: 6rem;
+    gap: 0.8rem;
+    padding: 5px 10px 20px 10px;
+  }
+  .starting-info-text {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  #apartments-section {
+    margin-top: 6rem;
+  }
+  .ap-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+  .ap-text p {
+    border-bottom: 2px solid #c4a484;
+    padding: 10px;
+  }
+  .btn {
+    font-size: 0.9rem;
+    width: 40%;
+  }
+  .location-text {
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px 10px;
+  }
+  #contact {
+    padding: 30px 10px;
+  }
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.9rem;
+    font-size: 1rem;
+  }
+  .contact-form {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .contact-form h4 {
+    margin-top: 1rem;
+  }
+  .form-grup {
+    width: 80%;
+  }
+  .form-grup input {
+    font-size: 0.9rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+  footer .social-media {
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px;
   }
 }

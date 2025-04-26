@@ -7,7 +7,7 @@
   --primary-color: #fffdd0;
   --secondary-color: #472a17;
   --third-color: #f8f8f8;
-  --fourth-color: #fffaf0;
+  --fourth-color: #c4a484;
 }
 html {
   scroll-behavior: smooth;
@@ -146,7 +146,7 @@ nav img {
   display: flex;
   padding: 40px 60px 60px 60px;
   font-size: 1.7rem;
-  background: var(--fourth-color);
+  background: var(--third-color);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -221,12 +221,6 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.ap-box .active {
-  flex: 5;
-}
-.ap-box .active h3 {
-  opacity: 1;
 }
 
 .ap-box h2 {
@@ -863,4 +857,141 @@ footer p {
     text-align: center;
     padding: 20px;
   }
+}
+
+/* Pagina speciala de apartamente */
+#locuinte-welcome {
+  background: url(./charlies-x-OenbYMojNJ4-unsplash.jpg) center center/cover
+    no-repeat;
+  height: 100vh;
+}
+.bold {
+  font-weight: 600;
+}
+.locuinte-welcome-text {
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--third-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5rem;
+  width: 100%;
+  padding: 35px;
+  text-align: center;
+}
+.locuinte-welcome-text h2 {
+  font-size: 1.5rem;
+}
+.locuinte-welcome-text h1 {
+  margin-bottom: 0.5rem;
+  margin-top: -1rem;
+}
+.locuinte-navigatie {
+  padding: 30px 10px;
+  background: var(--third-color);
+}
+.locuinte-navigatie ul {
+  list-style: none;
+  display: flex;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.locuinte-navigatie ul a {
+  padding: 5px 0px;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid inherit;
+  transition: all ease-in-out 0.4s;
+}
+.locuinte-navigatie ul a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+}
+
+.section {
+  display: none;
+  transition: all ease 0.4s;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 30px 15px;
+  transition: all ease-in-out 0.3s;
+}
+.locuinte-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 10px 15px;
+  text-align: start;
+}
+.locuinte-box img {
+  width: 100%;
+}
+.locuinte-box h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.locuinte-box span {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.locuinte-box a {
+  text-decoration: none;
+  cursor: pointer;
+  align-self: flex-end;
+  color: var(--secondary-color);
+  margin-top: 0.3rem;
+}
+.span-oferte {
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+.locuinte-active {
+  display: grid;
+}
+#locuinte-text {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #c4a484;
+}
+.locuinte-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+    0 0 20px 0 rgba(255, 255, 255, 0.19);
+  border-radius: 10px;
+  padding: 20px;
+  color: #f8f8f8;
+}
+.locuinte-text-box i {
+  font-size: 3rem;
+  color: var(--fourth-color);
+}
+.locuinte-text-image {
+  padding: 5px;
+  border-radius: 10px;
+}
+.locuinte-text-image img {
+  background: url(./roxanne-joncas-DxLGT3bEKkE-unsplash.jpg) center cover;
+  width: 100%;
 }

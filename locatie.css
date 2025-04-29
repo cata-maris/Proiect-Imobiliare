@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 3rem;
 }
 #locatie-welcome div {
   display: flex;
@@ -16,6 +15,7 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
   height: 100%;
+  padding-top: 3rem;
 }
 #locatie-welcome h2 {
   font-size: 3rem;
@@ -111,4 +111,107 @@
 }
 .locatie-cards p {
   font-size: 1.1rem;
+}
+
+@media (max-width: 1200px) {
+  .locatie-continut-box {
+    width: 100%;
+    padding: 50px 30px;
+  }
+  .locatie-info {
+    padding: 3rem 20px;
+  }
+  .locatie-container {
+    gap: 1rem;
+  }
+}
+@media (max-width: 1066px) {
+  .locatie-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  #locatie-welcome h2 {
+    font-size: 2rem;
+    padding: 0;
+  }
+  #locatie-welcome div {
+    padding: 20px;
+  }
+  .locatie-link {
+    font-size: 1.1rem;
+  }
+  .locatie-continut-box {
+    flex-direction: column;
+    height: 140vh;
+    width: 100%;
+
+    margin: auto;
+  }
+  .locatie-continut-text {
+    align-items: center;
+    text-align: center;
+  }
+  .locatie-continut-text a {
+    width: 50%;
+  }
+}
+@media (max-width: 775px) {
+  .locatie-continut-box {
+    gap: 1.5rem;
+  }
+  #locatie-img {
+    height: 80vh;
+  }
+  #locatie-info {
+    padding: 20px;
+    text-align: center;
+  }
+  .locatie-container {
+    gap: 0.5rem;
+    width: 100%;
+  }
+}
+@media (max-width: 775px) {
+  .locatie-container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 1.1rem;
+  }
+  .locatie-cards {
+    padding: 5px;
+  }
+  .locatie-continut-box {
+    padding: 30px 20px;
+    height: 160vh;
+  }
+}
+@media (max-width: 470px) {
+  #locatie-welcome h2 {
+    font-weight: 600;
+    font-size: 1.7rem;
+  }
+  .locatie-cards i {
+    font-size: 2.5rem;
+    padding: 20px;
+    border-radius: 50%;
+    background: #222;
+    color: var(--fourth-color);
+  }
+  .locatie-cards h3 {
+    font-size: 1.1rem;
+  }
+  .locatie-cards p {
+    font-size: 1rem;
+  }
+  .locatie-link {
+    font-size: 1rem;
+  }
+  .locatie-continut-box {
+    padding: 30px 15px;
+  }
+  .locatie-continut-text h1 {
+    font-size: 1.3rem;
+  }
 }

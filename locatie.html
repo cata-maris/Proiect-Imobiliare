@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="locatie.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="locatie.css">
     <script
       src="https://kit.fontawesome.com/21cc80cb87.js"
       crossorigin="anonymous"
@@ -27,7 +27,7 @@
         <li><a href="./index.html">Despre noi</a></li>
         <li><a href="./locuinte.html">Locuințe</a></li>
         <li ><a class="bold" href="locatie.html">Locație</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <img src="./img/logo-transparent-copie.png" alt="LOGO" />
       <div class="nav-contacts">
@@ -125,43 +125,44 @@
         
       <button id="top-btn" title="Go to top"><i class="fa-solid fa-upload"></i></button>
           <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+          
           <script>
     
-            // pentru bara de navigatie 
-        let prevState = window.pageYOffset;
-        const topBtn = document.getElementById("top-btn");
-    
-        window.onscroll = function () {
-      if (window.innerWidth >= 730) {
-        let currentState = window.pageYOffset;
-        if (window.scrollY > 150) {
-          
-    
-          if (prevState > currentState) {
-            document.querySelector("nav").style.opacity = "100%";
-          } else {
-            document.querySelector("nav").style.opacity = "0";
-          }
-          prevState = currentState;
-        } else {
-          
-        }
+           // pentru bara de navigatie 
+           let prevState = window.pageYOffset;
+    const topBtn = document.getElementById("top-btn");
+
+    window.onscroll = function () {
+  if (window.innerWidth >= 730) {
+    let currentState = window.pageYOffset;
+    if (window.scrollY > 150) {
+      
+
+      if (prevState > currentState) {
+        document.querySelector("nav").style.opacity = "100%";
+      } else {
+        document.querySelector("nav").style.opacity = "0";
       }
-    };
-    
-    //animatie pentru butonul de back-on-top
-    topBtn.addEventListener("click", () => {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    });
-    
-    // hamburger menu
-    const hamburger = document.querySelector(".hamburger");
-    
-    hamburger.addEventListener("click", () => {
-      document.querySelector("nav").classList.toggle("on");
-      hamburger.classList.toggle("change");
-    });
+      prevState = currentState;
+    } else {
+      
+    }
+  }
+};
+
+//animatie pentru butonul de back-on-top
+topBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
+
+// hamburger menu
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+  document.querySelector("nav").classList.toggle("on");
+  hamburger.classList.toggle("change");
+});
 
     // harta
 const map = L.map("locatie-img").setView([44.1749, 28.6348], 12); // Constanța
